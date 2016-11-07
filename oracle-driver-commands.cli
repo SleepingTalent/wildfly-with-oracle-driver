@@ -1,8 +1,6 @@
-
+batch
 #To create the jboss module for oracle
 module add --name=com.oracle --resources=/opt/jboss/wildfly/ojdbc7.jar --dependencies=javax.api,javax.transaction.api
-
-batch
 
 /subsystem=datasources/jdbc-driver=oracle:add(driver-name=oracle,driver-module-name=com.oracle,driver-xa-datasource-class-name=oracle.jdbc.driver.OracleDriver)
 
